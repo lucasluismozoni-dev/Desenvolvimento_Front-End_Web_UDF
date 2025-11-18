@@ -1,0 +1,86 @@
+# **Atividade Avaliativa II – Página Inicial de uma Loja Virtual**
+
+## **Objetivo**
+Desenvolver a página inicial de uma loja virtual fictícia utilizando **HTML5** e **CSS** básico para estruturar e estilizar o conteúdo.  
+O foco é criar uma interface visualmente agradável, com seções bem definidas, produtos organizados e uso correto de **tags semânticas**.
+
+---
+
+## **Cenário**
+Você foi contratado como **desenvolvedor front-end júnior** por uma loja virtual chamada **TechStore**, especializada em eletrônicos e acessórios modernos.
+
+O gerente de marketing solicitou a criação de uma **página inicial** que contenha:
+- Catálogo principal  
+- Informações sobre a marca  
+- Formulário de contato para clientes  
+
+Sua missão é criar um **protótipo da página web**, simulando a vitrine digital da empresa.
+
+---
+
+## **Descrição da Atividade**
+
+Os alunos devem criar o arquivo **index.html**, estruturado nas seções abaixo:
+
+---
+
+### **1. Cabeçalho (Header)**
+- Logo da loja (imagem ou nome estilizado).
+- Menu de navegação com links âncora:
+  - Início  
+  - Produtos  
+  - Sobre  
+  - Contato  
+- Campo de busca:
+  - `<input>`  
+  - Botão **Buscar**
+
+---
+
+### **2. Seção “Banner” (Destaque)**
+- Uma imagem grande ou banner promocional (ex.: *"Super Ofertas de Outono!"*).
+- Texto promocional curto.
+- Botão: **Compre Agora**
+
+---
+
+### **3. Seção “Produtos em Destaque”**
+Apresentar **3 a 6 produtos** em formato de **cards**, contendo:
+- Imagem do produto  
+- Nome  
+- Preço  
+- Botão **Adicionar ao carrinho** (sem funcionalidade necessária)
+
+---
+
+### **4. Seção “Sobre a Loja”**
+- Pequeno texto (3–5 linhas) apresentando história e missão da TechStore.  
+- Imagem ilustrativa (equipe ou produtos tecnológicos).
+
+---
+
+### **5. Seção “Contato”**
+Formulário contendo:
+- Nome completo (required)  
+- E-mail (required)  
+- Mensagem (required)  
+- Botão **Enviar mensagem**
+
+---
+
+### **6. Rodapé (Footer)**
+Deve conter:
+- Links para redes sociais  
+- Informações da empresa (CNPJ fictício, endereço)  
+- Texto padrão:  
+  **“© 2025 TechStore – Todos os direitos reservados.”**
+
+---
+
+## **Requisitos Técnicos**
+
+- Uso de HTML5 semântico:  
+  `<header>`, `<nav>`, `<section>`, `<article>`, `<footer>`
+- Estilos definidos em **CSS externo** (style.css).
+- Organização mínima das pastas:
+
