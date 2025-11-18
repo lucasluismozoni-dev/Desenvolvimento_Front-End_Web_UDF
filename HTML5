@@ -1,0 +1,460 @@
+Conteúdo da avaliação
+📝 Atividade Prática – HTML5 Semântico 
+
+📌 Valor da Atividade: 1 ponto na nota da disciplina Desenvolvimento Web front-end.
+
+
+
+🎯 Objetivo
+
+
+
+Desenvolver uma página web utilizando HTML5 semântico, praticando a estruturação correta do conteúdo, a inserção de multimídia e a organização de informações com tabelas, formulários e documentos incorporados.
+
+
+
+📌 Descrição da Atividade
+
+
+
+Você deverá criar um arquivo chamado atividade.html, estruturando a página com as seguintes tags semânticas mínimas obrigatórias:
+
+
+
+<header>
+
+<nav>
+
+<main>
+
+<section>
+
+<article>
+
+<aside>
+
+<footer>
+
+
+
+A página deve conter, obrigatoriamente:
+
+
+
+Imagem (<img>) representando um banner ou logotipo.
+
+Vídeo (<video> ou <iframe> do YouTube).
+
+Tabela (<table>) com pelo menos 3 colunas e 3 linhas.
+
+Formulário (<form>) com:
+
+Campo de texto;
+
+Campo de e-mail;
+
+Campo de seleção (<select>);
+
+Botão de envio.
+
+PDF embutido utilizando <embed> ou <iframe>.
+
+
+
+🎨 Temas disponíveis (escolha apenas 1)
+
+
+
+Restaurante 🍝
+
+Banner: logotipo ou foto de um prato.
+
+Tabela: cardápio com preços.
+
+Formulário: reserva de mesa.
+
+PDF: cardápio completo.
+
+Vídeo: receita ou apresentação do restaurante.
+
+
+
+Loja de Eletrônicos 💻
+
+Banner: imagem de promoção.
+
+Tabela: lista de produtos (ex.: notebook, celular, TV).
+
+Formulário: cadastro de cliente.
+
+PDF: catálogo de produtos.
+
+Vídeo: propaganda de lançamento.
+
+
+
+Evento Acadêmico 🎓
+
+Banner: imagem da instituição.
+
+Tabela: cronograma de palestras (dia, horário, palestrante).
+
+Formulário: inscrição no evento.
+
+PDF: programação completa.
+
+Vídeo: chamada oficial do evento.
+
+
+
+Portfólio Pessoal 👨‍💻
+
+Banner: foto pessoal ou logotipo.
+
+Tabela: lista de habilidades (tecnologia, nível, anos de experiência).
+
+Formulário: contato para parcerias.
+
+PDF: currículo em PDF.
+
+Vídeo: apresentação pessoal (ou embed do YouTube).
+
+
+
+Clube de Esportes ⚽
+
+Banner: escudo ou foto do time.
+
+Tabela: jogos (data, adversário, resultado).
+
+Formulário: cadastro de sócio-torcedor.
+
+PDF: regulamento do campeonato.
+
+Vídeo: melhores momentos do time.
+
+
+
+✅ Critérios de Avaliação
+
+
+
+Uso correto das tags semânticas.
+
+Inclusão de todos os elementos obrigatórios.
+
+Organização e indentação do código.
+--------------------------
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Restaurante Sabor Italiano</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+
+        header, nav, main, footer, section, article, aside {
+
+            padding: 20px;
+
+            margin: 10px;
+
+        }
+
+
+
+        header {
+
+            background-color: #d62828;
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+
+
+        nav {
+
+            background-color: #fcbf49;
+
+            text-align: center;
+
+        }
+
+
+
+        nav a {
+
+            margin: 0 15px;
+
+            text-decoration: none;
+
+            color: #333;
+
+            font-weight: bold;
+
+        }
+
+
+
+        table {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+            margin-top: 15px;
+
+        }
+
+
+
+        table, th, td {
+
+            border: 1px solid #ccc;
+
+        }
+
+
+
+        th, td {
+
+            padding: 10px;
+
+            text-align: center;
+
+        }
+
+
+
+        form input, form select, form button {
+
+            display: block;
+
+            margin: 10px 0;
+
+            padding: 8px;
+
+            width: 100%;
+
+            max-width: 300px;
+
+        }
+
+
+
+        footer {
+
+            background-color: #003049;
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+
+
+        iframe, video, embed {
+
+            max-width: 100%;
+
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <header>
+
+        <img src="https://via.placeholder.com/150x80?text=Logo+Restaurante" alt="Logo do Restaurante">
+
+        <h1>Restaurante Sabor Italiano</h1>
+
+    </header>
+
+
+
+    <nav>
+
+        <a href="#cardapio">Cardápio</a>
+
+        <a href="#reserva">Reserva</a>
+
+        <a href="#video">Vídeo</a>
+
+        <a href="#pdf">Menu Completo</a>
+
+    </nav>
+
+
+
+    <main>
+
+
+
+        <section id="cardapio">
+
+            <h2>Cardápio do Dia</h2>
+
+            <table>
+
+                <tr>
+
+                    <th>Prato</th>
+
+                    <th>Descrição</th>
+
+                    <th>Preço</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>Spaghetti à Bolonhesa</td>
+
+                    <td>Macarrão com molho de carne</td>
+
+                    <td>R$ 28,90</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Lasanha de Frango</td>
+
+                    <td>Lasanha com molho branco e frango</td>
+
+                    <td>R$ 32,50</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Pizza Margherita</td>
+
+                    <td>Tomate, mussarela e manjericão</td>
+
+                    <td>R$ 39,90</td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+
+
+        <article id="reserva">
+
+            <h2>Reserva de Mesa</h2>
+
+            <form>
+
+                <label for="nome">Nome:</label>
+
+                <input type="text" id="nome" name="nome" required>
+
+
+
+                <label for="email">E-mail:</label>
+
+                <input type="email" id="email" name="email" required>
+
+
+
+                <label for="horario">Horário:</label>
+
+                <select id="horario" name="horario" required>
+
+                    <option value="">Selecione um horário</option>
+
+                    <option value="12h">12:00</option>
+
+                    <option value="13h">13:00</option>
+
+                    <option value="20h">20:00</option>
+
+                    <option value="21h">21:00</option>
+
+                </select>
+
+
+
+                <button type="submit">Reservar</button>
+
+            </form>
+
+        </article>
+
+
+
+        <section id="video">
+
+            <h2>Apresentação do Restaurante</h2>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+
+                title="Apresentação Restaurante" frameborder="0"
+
+                allowfullscreen></iframe>
+
+        </section>
+
+
+
+        <aside>
+
+            <h3>Cardápio em PDF</h3>
+
+            <p>Confira o nosso cardápio completo abaixo:</p>
+
+            <embed src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+
+                   type="application/pdf" width="100%" height="500px">
+
+        </aside>
+
+
+
+    </main>
+
+
+
+    <footer>
+
+        <p>&copy; 2025 Restaurante Sabor Italiano. Todos os direitos reservados.</p>
+
+    </footer>
+
+
+
+</body>
+
+</html>
