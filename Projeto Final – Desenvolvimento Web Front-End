@@ -1,0 +1,338 @@
+#  Site Esportivo – Projeto Front-End
+
+Este projeto consiste na criação de uma página inicial temática esportiva, desenvolvida com HTML5, CSS3 e JavaScript básico. O objetivo é aplicar conceitos fundamentais de desenvolvimento web, organização visual e semântica de código.
+
+---
+
+##  Objetivo do Projeto
+
+Criar uma página inicial responsiva e visualmente atraente, simulando uma loja/portal esportivo.  
+O site utiliza tags semânticas, um banner chamativo e seções organizadas para demonstrar boas práticas de front-end.
+
+---
+
+##  Funcionalidades
+
+- Banner esportivo de destaque
+- Navegação simples e intuitiva
+- Seção de produtos/itens esportivos
+- Layout totalmente responsivo
+- Estilização moderna com CSS3
+- Scripts básicos em JavaScript (como interações e menus)
+
+---
+
+##  Tecnologias Utilizadas
+
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Git & GitHub** para versionamento
+
+---
+
+##  Projeto
+
+## HTML
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportZone - Portal de Esportes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1> SportZone</h1>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#videos">Vídeos</a></li>
+                <li><a href="#imc">IMC do Atleta</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Banner -->
+        <section class="banner">
+            <h2>Bem-vindo ao SportZone</h2>
+            <p>Seu portal com notícias do esporte mundial</p>
+            <img src="banner.jpg" alt="Banner esportivo">
+        </section>
+
+        <!-- Notícias -->
+<section id="noticias" class="noticias">
+    <h2>Últimas Notícias</h2>
+
+    <div class="grid">
+
+        <article class="card">
+            <img src="futebol.jpg" alt="Notícia futebol">
+            <h3>Final do Campeonato</h3>
+            <p>Time vence nos últimos minutos e garante o título.</p>
+            <a href="https://ge.globo.com/futebol/" target="_blank">
+                <button>Leia Mais</button>
+            </a>
+        </article>
+
+        <article class="card">
+            <img src="basquete.jpg" alt="Notícia basquete">
+            <h3>Estrela do Basquete</h3>
+            <p>Jogador bate recorde histórico de pontos.</p>
+            <a href="https://ge.globo.com/basquete/" target="_blank">
+                <button>Leia Mais</button>
+            </a>
+        </article>
+
+        <article class="card">
+            <img src="maratona.jpg" alt="Notícia corrida">
+            <h3>Maratona Internacional</h3>
+            <p>Competidores enfrentam percurso de 42km.</p>
+            <a href="https://ge.globo.com/corrida/" target="_blank">
+                <button>Leia Mais</button>
+            </a>
+        </article>
+
+    </div>
+</section>
+
+        <!-- Vídeos -->
+        <section id="videos" class="videos">
+            <h2>Melhores Momentos - Brasil e Tunísia</h2>
+
+            <video controls width="380">
+                <source src="video.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos HTML5.
+            </video>
+
+        </section>
+
+        <!-- IMC -->
+        <section id="imc" class="form-section">
+            <h2>Calcule o IMC do Atleta</h2>
+
+            <form id="formIMC">
+                <label>Peso (kg):</label>
+                <input type="number" id="peso" required>
+
+                <label>Altura (m):</label>
+                <input type="number" step="0.01" id="altura" required>
+
+                <button type="submit">Calcular</button>
+            </form>
+
+            <p id="resultadoIMC"></p>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="contato">
+            <h2>Fale Conosco</h2>
+
+            <form id="formContato">
+                <label>Nome:</label>
+                <input type="text" id="nome" required>
+
+                <label>Email:</label>
+                <input type="email" id="email" required>
+
+                <label>Assunto:</label>
+                <select id="assunto" required>
+                    <option value="">Selecione</option>
+                    <option>Notícias</option>
+                    <option>Eventos</option>
+                    <option>Suporte</option>
+                </select>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <p id="msgContato"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 SportZone — Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+## CSS
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e9f2ff;
+    color: #222;
+}
+
+/* HEADER */
+header {
+    background: #003566;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+/* BANNER */
+.banner {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    margin-bottom: 20px;
+}
+
+.banner img {
+    max-width: 90%;
+    border-radius: 15px;
+}
+
+/* NOTÍCIAS */
+.noticias {
+    padding: 20px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #bbb;
+    transition: transform .3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card button {
+    background: #003566;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card button:hover {
+    background: #001d3d;
+}
+
+/* FORMULÁRIOS */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    margin: auto;
+}
+
+input, select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #888;
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #003566;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #001d3d;
+}
+
+/* VÍDEOS */
+.videos {
+    text-align: center;
+    padding: 20px;
+}
+
+/* FOOTER */
+footer {
+    background: #003566;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+## JavaScript
+
+// FORMULÁRIO DE IMC
+document.getElementById("formIMC").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let peso = parseFloat(document.getElementById("peso").value);
+    let altura = parseFloat(document.getElementById("altura").value);
+
+    if (peso <= 0 || altura <= 0) {
+        document.getElementById("resultadoIMC").innerText = "Valores inválidos!";
+        return;
+    }
+
+    let imc = peso / (altura * altura);
+    let resultado = "";
+
+    if (imc < 18.5) resultado = "Abaixo do peso (para atleta)";
+    else if (imc < 24.9) resultado = "Peso ideal (ótimo para performance)";
+    else if (imc < 29.9) resultado = "Acima do peso";
+    else resultado = "Obesidade";
+
+    document.getElementById("resultadoIMC").innerText =
+        `IMC: ${imc.toFixed(2)} — ${resultado}`;
+});
+
+
+// FORMULÁRIO DE CONTATO
+document.getElementById("formContato").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+
+    document.getElementById("msgContato").innerText =
+        `Obrigado, ${nome}! Sua mensagem foi recebida.`;
+});
